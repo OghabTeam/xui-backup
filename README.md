@@ -2,6 +2,31 @@
 
 This PHP script uploads a backup file to a remote FTP server. It is intended to be run periodically using `crontab` on an Ubuntu system.
 
+## Prerequisites
+
+To run this script, you need to have PHP installed on your server. Follow these steps to install PHP 8.1 and necessary extensions on Ubuntu:
+
+1. Update the package list and upgrade existing packages:
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+2. Add the PHP repository:
+    ```bash
+    sudo add-apt-repository ppa:ondrej/php
+    ```
+3. Update the package list again:
+    ```bash
+    sudo apt update
+    ```
+4. Install PHP 8.1:
+    ```bash
+    sudo apt install php8.1 -y
+    ```
+5. Install additional PHP 8.1 extensions:
+    ```bash
+    sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
+    ```
+
 ## Usage
 
 1. Clone the repository to your local machine.
